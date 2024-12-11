@@ -4,12 +4,10 @@ using namespace std;
 
 int main(){
 
-    char str[]="hello";
-    cout<<str;
+   string s;
+   s="abcdef";
 
-    string str1;
-    str1="HEL";
-    cout<<str1;
-
+   cout<<s.substr(1,3);
+    
 return 0;
-}
+}         
