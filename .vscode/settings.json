@@ -1,6 +1,7 @@
 {
     "files.autoSave": "afterDelay",
     "files.associations": {
-        "initializer_list": "cpp"
+        "initializer_list": "cpp",
+        "iostream": "cpp"
     }
 }
