@@ -63,15 +63,29 @@ void InsertAtHead(int val){
     }
 
 void Insert(int idx,int val){
-    Node* temp=new Node(val);
-    if(idx==0){
+    if(idx<0 || idx> size){
+        cout<<"index cannot be negative "<<endl;
+    }
+    else if(idx==0){
         InsertAtHead(val);
+        size++;
     }
     else if(idx==size){
         InsertAtEnd(val);
+        size++;
     }
     else{
-        
+    Node* t=new Node(val);
+    Node* temp=head;
+    while(idx-1!=0){
+        temp=temp->next;
+        idx--;
+    }
+    t->next=temp->next;
+    temp->next=t;
+
+    size++;
+
     }
 }
 
@@ -83,7 +97,11 @@ LinkedList* ll=new LinkedList();   // Here the part of arrow is important
 ll->InsertAtEnd(10);               // If the class was made statically then we have to use dot operator
 ll->InsertAtEnd(20);               // As I created it dynamically, I'm using arrow operator
 ll->InsertAtEnd(30);
+ll->InsertAtEnd(40);
 ll->InsertAtHead(50);
+ll->InsertAtHead(24);
+ll->display();
+ll->Insert(4,80);
 ll->display();
 cout<<ll->size;
 return 0;
