@@ -5,7 +5,8 @@
         "iostream": "cpp",
         "new": "cpp",
         "queue": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "array": "cpp"
     },
     "github.copilot.editor.enableAutoCompletions": false
 }
