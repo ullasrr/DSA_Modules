@@ -47,7 +47,7 @@ void display(){
             temp=temp->next;
         }
         cout<<endl;
-    }
+}
 
 void InsertAtHead(int val){
         Node* temp=new Node(val);
@@ -60,7 +60,7 @@ void InsertAtHead(int val){
         }
         size++;
 
-    }
+}
 
 void Insert(int idx,int val){
     if(idx<0 || idx> size){
