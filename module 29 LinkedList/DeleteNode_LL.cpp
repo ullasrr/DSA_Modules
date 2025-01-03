@@ -86,75 +86,8 @@ void InsertAtEnd(int val){
             size++;
 }
 
-int getAtIdx(int idx){
-    if(idx<0 || idx>=size){
-        cout<<"Invalid"<<endl;
-        return -1;
-    }
-    else if(idx==0){
-        return head->val;
-    }
-    else if(idx==size-1){
-        return tail->val;
-    }
-    else{
-        Node* temp=head;
-        for(int i=1;i<=idx;i++){
-            temp=temp->next;
-        }
-        return temp->val;
-    }
-}
+void deleteNode(Node* head,Node* target){
 
-void deleteEleHead(){
-    if(size==0) {
-        cout<<"Linked List is empty"<<endl;
-        return;
-    }
-        head=head->next;
-        size--;
-    
-}
-
-void delete_tail(){
-    if(size==0) {
-        cout<<"Linked List is empty"<<endl;
-        return;
-    }
-    Node* temp=head;
-    while(temp->next->next !=NULL){
-        temp=temp->next;
-    }
-    temp->next=NULL;
-    tail=temp;
-    size--;
-    return;
-    
-}
-
-void delete_any_idx(int idx){
-    if(idx<0 || idx>size-1){
-        cout<<"invalid"<<endl;
-        return;
-    }
-    else if(idx==0){
-        deleteEleHead();
-        return;
-    }
-    else if(idx==size){
-        delete_tail();
-        return;
-    }
-    else{
-    
-    Node* temp=head;
-    while(idx>1){
-        temp=temp->next;
-        idx--;
-    }
-    temp->next=temp->next->next;
-    size--;
-    return;}
 }
 
 };
@@ -165,17 +98,9 @@ ll->InsertAtEnd(10);               // If the class was made statically then we h
 ll->InsertAtEnd(20);               // As I created it dynamically, I'm using arrow operator
 ll->InsertAtEnd(30);
 ll->InsertAtEnd(40);
-ll->InsertAtHead(50);
-ll->InsertAtHead(24);
-ll->Insert(4,80);
+ll->InsertAtEnd(50);
+ll->InsertAtEnd(60);
 ll->display();
-// cout<<ll->getAtIdx(3)<<endl; 
-// ll->deleteEleHead();
-// ll->display();
-// ll->delete_tail();
-// ll->display();
-ll->delete_any_idx(0);
-ll->display();
-
+ll->deleteNode(10,30);
 return 0;
 }
