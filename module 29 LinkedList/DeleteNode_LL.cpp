@@ -100,7 +100,7 @@ ll->InsertAtEnd(30);
 ll->InsertAtEnd(40);
 ll->InsertAtEnd(50);
 ll->InsertAtEnd(60);
-ll->display();
+ll->display(); 
 ll->deleteNode(10,30);
 return 0;
 }
